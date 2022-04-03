@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 頁首 */
+
+header {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    position: fixed;
+    z-index: 5;
+}
+
+
+/* 搜尋欄位 */
+
+#search {
+    display: inline-block;
+    position: absolute;
+    right: 130px;
+    top: 15px;
+    background-color: rgb(182, 212, 223);
+    border-radius: 15px;
+    border: 0px;
+    width: 150px;
+}
+
+#loupe {
+    position: absolute;
+    width: 20px;
+    right: 140px;
+    top: 17px;
+}
+
+
+/* 導覽選單 */
+
+#navi {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 66px;
+}
+
+.nav-item {
+    display: inline-block;
+    top: 5px;
+}
+
+.nav-item ul li {
+    display: none;
+    padding-top: 5px;
+    background: black;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.nav_ul {
+    list-style: none;
+    padding: 10px;
+    left: 0;
+    top: 0;
+}
+
+.nav_ul li {
+    display: none;
+}
+
+.nav_ul a {
+    text-decoration: none;
+    color: yellow;
+}
+
+.nav_ul li a {
+    text-decoration: none;
+    color: yellow;
+}
+
+
+/* 下拉選單 */
+
+.nav-item ul li a:link,
+.nav-item ul li a:visited {
+    text-decoration: none;
+    color: yellow;
+}
+
+.nav-item ul li:hover {
+    background: #555;
+}
+
+.nav-item ul li a:hover,
+.nav-item ul li a:active {
+    color: rgb(0, 255, 98);
+}
+
+.nav-item .nav_ul .switchDisplay {
+    background: #ff0;
+}
+
+ul.switchDisplay li {
+    display: block;
+}
+
+
+/* 背景亮度按鈕 */
+
+#lightbtn {
+    height: 50px;
+    position: relative;
+}
+
+#btn-light {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+#btn-dark {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: yellow;
+}
+
+.sunmoon {
+    width: 30px;
+}
+
+#btn-light.-off {
+    display: none;
+}
+
+#btn-dark.-off {
+    display: none;
+}
+
+
+/* main工作區 */
+
+main.-dark {
+    background-color: #111111;
+    color: white;
+    border: 10px solid white;
+}
+
+main {
+    padding-top: 100px;
+    width: 100%;
+    border: 10px solid black;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/* 表頭商城首頁大圖區 */
+main div.shopping-mall-home {
+    width: 100%;
+    height: 80px;
+    font-size: 48px;
+}
+main div a.btn-home {
+    text-decoration :none;
+    color: rgba(0, 0, 0, 0.7);
+}
+/* 表頭搜尋區域 */
+main div.shopping-mall-search{
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+
+main div input.search-input{
+    width: 100%;
+    height: 30px;
+    padding: 0 12px;
+    border: unset;
+    border-radius: 5px;
+    outline:solid 1px silver;
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 16px;
+    color: silver;
+}
+
+main div input.search-input:focus{
+    border: 1px solid #0088CC;
+    outline : solid 1px #0088CC;
+}
+
+main div button.search-btn{
+    top: 28px;
+    right: 10px;
+    position: absolute;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    color: #808080;
+}
+
+/* 表頭購物車&我的訂單區域 */
+main div.head-btn-bar{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    text-align: center;
+}
+
+main div a.btn-cart {
+    color: #989898;
+    text-decoration :none;
+}
+
+main div.pic-cart i {
+    color: #989898;
+    font-size: 35px;
+}
+
+
+main div a.btn-list {
+    color: #989898;
+    text-decoration :none;
+}
+
+main div.pic-list i {
+    color: #989898;
+    font-size: 35px;
+}
+
+/* 表頭選項區 */
+main div.shop-head2 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+main ul.head-options {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin-bottom: -4px;
+}
+main nav ul li {
+    padding: 0 5px;
+    margin-top: 9px;
+}
+
+main nav ul li a {
+    text-decoration: none;
+    color: #0088CC;
+    font-size: 16px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding: 5px 10px 0px 10px;
+}
+
+main nav ul li a:hover {
+    background-color: #1197FF;
+    color: white;
+}
+
+/* 分隔線 */
+main div.shop-head2 div.line {
+    height: 1.5px;
+    background-image: linear-gradient(to right, #EFEFF4, #B5B5B5, #EFEFF4);
+    font-size: 500px;
+}
+
+/* 網站位置區 */
+main div.page_location ol {
+    font-size: 1px;
+    font-weight: 600;
+}
+
+main div.page_location a {
+    color: #6c757d;
+}
+
+/* 公仔商品區 */
+main div.shopping-area-others a {
+    text-decoration: none;
+    margin: 2.5px;
+}
+
+main div.shopping-area-others img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+main div.shopping-area-others div.card {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+main div.shopping-area-others div.card-body {
+    height: 80px;
+    padding: 3px;
+}
+
+main div.shopping-area-others p.card-title{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+main div.shopping-area-others p.card-text {
+    font-size: 20px;
+    color: #0088CC;
+    padding-top: 10px;
+}
+
+/* 頁數 */
+main div.change_page .page-link{
+    color: #0088CC;
+}
+
+/* main工作區結束 */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(to top, #537895 100%, #09203f 0%);
+    text-align: center;
+    position: relative;
+}
+
+footer h5 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 30px;
+}
+
+footer ul {
+    text-align: left;
+    list-style: none;
+}
+
+footer ul li {
+    text-align: left;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 14px;
+}
+
+#ft_icons span img {
+    width: 30px;
+}
+
+#ft_icons {
+    text-align: left;
+}
+
+#ft_icons a {
+    text-decoration: none;
+}
+
+footer .copyright {
+    background-image: linear-gradient(to top, #537895 100%, #09203f 0%);
+    bottom: 0;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+}
+
+footer .copyright a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .copyright a:hover,
+footer .copyright a:active {
+    color: #ffc107;
+}
+
+#linerobot {
+    width: 150px;
+}

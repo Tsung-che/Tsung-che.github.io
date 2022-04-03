@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css檔連結記得修改 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./CSS/shop_home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <header>
+        <!-- 背景亮度按鈕 -->
+        <div id="lightbtn">
+            <!-- 搜尋欄位 -->
+            <input id="search" type="text">
+            <a id="a_loupe" href="#">
+                <img id="loupe" src="./IMAGE/icons/loupe.png" alt="">
+            </a>
+            <button type="button" class="btn btn-success btn-ln" id="btn-light">Light
+                <span>
+                    <img id="sun" class="sunmoon" src="./IMAGE/icons/sun.png" alt="">
+                </span>
+            </button>
+            <button type="button" class="btn btn-dark btn-ln -off" id="btn-dark">Dark
+                <span>
+                    <img id="moon" class="sunmoon -off" src="./IMAGE/icons/crescent-moon.png" alt="">
+                </span>
+            </button>
+        </div>
+
+        <!-- 功能導覽列 -->
+        <nav id="navi">
+
+
+            <div class="nav-item">
+
+                <ul class="nav_ul" id="movie_ul">
+                    <a href="#">電影資訊</a>
+                    <li class="nav_li">
+                        <a href="#">現正熱映</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">即將上映</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">二輪上映</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">歷史上映</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-item">
+
+                <ul class="nav_ul" id="ticket_ul">
+                    <a href="#">訂票系統</a>
+                    <li class="nav_li">
+                        <a href="#">快速購票</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">預售票</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">讓票</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">確認劃位</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-item">
+
+                <ul class="nav_ul" id="forum_ul">
+                    <a href="#">討論區</a>
+
+                    <!--    有需要再新增 
+                        <li class="nav_li">
+                        <a href="#">討論區1</a>
+                    
+                    -->
+                </ul>
+            </div>
+
+            <div class="nav-item">
+
+                <ul class="nav_ul" id="goods_ul">
+                    <a href="#">電影商城</a>
+                    <li class="nav_li">
+                        <a href="#">餐飲類別</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">周邊商品</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-item">
+
+                <ul class="nav_ul" id="member_ul">
+                    <a href="#">會員登入</a>
+                    <li class="nav_li">
+                        <a href="#">會員登入</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">註冊會員</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">修改資料</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">歷史消費</a>
+                    </li>
+                    <li class="nav_li">
+                        <a href="#">會員登出</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <!-- 主要工作區 -->
+
+    <main>
+        <!-- 商城表頭1 -->
+        <div class="shop-head1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm">
+                        <div class="shopping-mall-home">
+                            <a href="./shop_home.html" class="btn-home">
+                                <div class="text">購物商城</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm">
+                        <div class="shopping-mall-search">
+                            <form>
+                                <input type="text" class="search-input" placeholder="搜尋想要的商品...">
+                                <button type="submit" class="search-btn">
+                                    <i class="fal fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm">
+                        <div class="head-btn-bar">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="./shop_cart.html" class="btn-cart">
+                                            <div class="pic-cart">
+                                                <i class="fal fa-shopping-cart"></i>
+                                            </div>
+                                            購物車
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="./shop_order.html" class="btn-list">
+                                            <div class="pic-list">
+                                                <i class="fal fa-list-alt"></i>
+                                            </div>
+                                            我的訂單
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商城表頭2 -->
+        <div class="shop-head2">
+            <div class="container">
+                <div class="col-12">
+                    <nav class="nav-options">
+                        <ul class="head-options">
+                            <li>
+                                <a href="./shop_new.html" class="link-options">新上架</a>
+                            </li>
+                            <li>
+                                <a href="./shop_poster.html" class="link-options">海報</a>
+                            </li>
+                            <li>
+                                <a href="./shop_cup.html" class="link-options">馬克杯</a>
+                            </li>
+                            <li>
+                                <a href="./shop_toy.html" class="link-options">公仔</a>
+                            </li>
+                            <li>
+                                <a href="./shop_others.html" class="link-options">其他</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 輪播&排名區 -->
+        <div class="shopping-area-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm">
+                        <div class="slick-area">
+                            <div>
+                                <a href="" style="width: 100%; display: inline-block;">
+                                    <img src="./IMAGE/shop/x400/batman_slick.png" alt="" class="slick_pic1">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" style="width: 100%; display: inline-block;">
+                                    <img src="./IMAGE/shop/x400/demon_slayer_slick.png" alt="" class="slick_pic2">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" style="width: 100%; display: inline-block;">
+                                    <img src="./IMAGE/shop/x400/godzilla_slick.png" alt="" class="slick_pic3">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="./shop_product_detail.html" style="width: 100%; display: inline-block;">
+                                    <img src="./IMAGE/shop/x400/joker_slick.png" alt="" class="slick_pic4">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" style="width: 100%; display: inline-block;">
+                                    <img src="./IMAGE/shop/x400/lion_king_slick.png" alt="" class="slick_pic5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm">
+                        <div class="rank-area">
+                            <div class="rank-head">
+                                商品排行榜
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm">
+                                        <div class="card">
+                                            <a href="./shop_product_detail.html" class="rank1">
+                                                <div class="title">
+                                                    <i class="fas fa-crown"></i> 第1名
+                                                </div>
+                                                <img src="./IMAGE/shop/x400/joker_slick.png" class="card-img-top"
+                                                    alt="...">
+                                                <div class="card-body">
+                                                    <p class="card-text">JOKER 海報</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm">
+                                        <div class="card">
+                                            <a href="" class="rank2">
+                                                <div class="title">
+                                                    <i class="fas fa-crown"></i> 第2名
+                                                </div>
+                                                <img src="./IMAGE/shop/x400/wow_slick.png" class="card-img-top"
+                                                    alt="...">
+                                                <div class="card-body">
+                                                    <p class="card-text">魔獸世界 馬克杯</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm">
+                                        <div class="card">
+                                            <a href="" class="rank3">
+                                                <div class="title">
+                                                    <i class="fas fa-crown"></i> 第3名
+                                                </div>
+                                                <img src="./IMAGE/shop/x400/batman_slick.png" class="card-img-top"
+                                                    alt="...">
+                                                <div class="card-body">
+                                                    <p class="card-text">蝙蝠俠 公仔</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 推薦商品分隔線 -->
+        <div class="line2-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 col-sm-6">
+                        推薦商品
+                    </div>
+                    <div class="col-md-11 col-sm-6">
+                        <div class="line2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 推薦商品區 -->
+        <div class="shopping-area-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="">
+                            <div class="card">
+                                <img src="./IMAGE/shop/x400/lion_king_slick.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">獅子王 海報</p>
+                                    <p class="card-text">NT$ 190</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 主要工作區結束 -->
+
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class="col col-md-3 col-sm-6">
+                    <h5>服務</h5>
+                    <ul>
+                        <li>
+                            <a href="#">電影導覽</a>
+                        </li>
+                        <li>
+                            <a href="#">快速訂票</a>
+                        </li>
+                        <li>
+                            <a href="#">討論區</a>
+                        </li>
+                        <li>
+                            <a href="#">周邊商城</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-md-3 col-sm-6">
+                    <h5>幫助</h5>
+                    <ul>
+                        <li>
+                            <a href="#">導覽</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-md-3 col-sm-6" id="ft_icons">
+                    <h5>關注我們</h5>
+                    <a href="#">
+                        <span>
+                            <img src="./IMAGE/icons/facebook.png" alt="">
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span>
+                            <img src="./IMAGE/icons/instagram.png" alt="">
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span>
+                            <img src="./IMAGE/icons/twitter-sign.png" alt="">
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span>
+                            <img src="./IMAGE/icons/youtube.png" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="col col-md-3 col-sm-6">
+                    <h5>加入好友</h5>
+                    <ul>
+                        <li>
+                            <span>
+                                <img id="linerobot" src="./IMAGE/others/robot.png" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright © 2022 TGA101第二組 Co. 保留所有權利。
+            <a href="#">隱私政策</a>
+            <a href="#">使用條款</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JS檔連結記得修改 -->
+    <script src="./JS/shop_home.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
